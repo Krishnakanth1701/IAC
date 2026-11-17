@@ -17,8 +17,9 @@ terraform {
   }
 # Terraform State Storage to Azure Storage Container (Values will be taken from Azure DevOps)
   backend "azurerm" {
-    
-  }   
+     use_oidc         = true
+    use_azuread_auth = true
+    }   
 }
 
 # Provider Block
